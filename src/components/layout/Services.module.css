@@ -1,0 +1,51 @@
+.servicesSection {
+  background-image: url("../../assets/CTA-BG.png");
+  background-size: cover;
+  background-color: #dfdfdf;
+  background-position: center center;
+  height: 80vh;
+}
+
+.servicesSection .container {
+  padding: 100px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicesSection h2 {
+  text-align: center;
+
+  color: #12273d;
+  font-family: "Lora";
+  font-size: 52px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.servicesSection h2::after {
+  content: "SERVICES";
+
+  position: absolute;
+  left: 50%;
+  top: -120%;
+  transform: translateX(-50%);
+
+  font-size: 114px;
+  font-weight: 700;
+
+  color: #ebebeb;
+
+  z-index: -1;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+
+  text-align: center;
+
+  margin-top: 100px;
+}

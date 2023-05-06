@@ -1,0 +1,156 @@
+.header {
+  background-image: url("../../assets/Background.png");
+  background-size: cover;
+  background-position: center center;
+
+  position: relative;
+
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: "Lora";
+  font-size: 32px;
+
+  color: white;
+}
+
+.logo span:first-child {
+  font-weight: 700;
+  color: white;
+}
+
+/* Navbar  */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+
+  padding: 4px 8px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Active class */
+a.active {
+  background-color: #741906;
+  border-radius: 6px;
+}
+
+/* Cart  */
+.cartItem {
+  display: flex;
+  position: relative;
+}
+
+.cartItem button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.cartItem div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-0%, -110%);
+
+  padding: 1px 4px;
+  border-radius: 4px;
+
+  background-color: #f8d7a4;
+  color: #223f5c;
+  font-weight: 600;
+}
+
+/* Hero Section Info */
+.heroInfo {
+  text-align: right;
+  max-width: 1200px;
+
+  padding: 0 64px;
+  color: #fff;
+
+  margin: 36px auto;
+}
+
+.innerHeroInfo {
+  margin-left: auto;
+  width: 50%;
+
+  font-family: "lora";
+}
+
+.heroInfo h1 {
+  margin: 0;
+
+  font-size: 64px;
+}
+
+.heroInfo p {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.innerHeroInfo button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 10px 20px;
+  margin-top: 42px;
+  margin-left: auto;
+
+  font-family: "lora";
+  font-size: 24px;
+
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 6px;
+
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.innerHeroInfo button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.innerHeroInfo button:hover path {
+  stroke: #000;
+}
+
+.arrow {
+  width: 14px;
+}

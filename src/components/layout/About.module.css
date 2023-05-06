@@ -1,0 +1,53 @@
+.aboutSection {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  padding: 100px 64px;
+  max-width: 1200px;
+  margin: 0 auto 52px;
+}
+
+.aboutSection h2 {
+  color: #741906;
+  font-family: "Lora";
+  font-size: 62px;
+
+  position: relative;
+}
+
+.aboutSection h2::after {
+  content: "ABOUT US";
+
+  position: absolute;
+  left: -2%;
+  top: -112%;
+
+  font-size: 114px;
+  font-weight: 700;
+
+  color: #ebebeb;
+
+  z-index: -1;
+}
+
+.aboutSection p {
+  color: #232730;
+}
+
+.imgCar {
+  position: relative;
+}
+
+.imgCar img:last-child {
+  width: 380px;
+}
+
+.imgCar img:first-child {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+}
