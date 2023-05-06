@@ -1,6 +1,7 @@
 import Header from "./components/layout/Header";
 import About from "./components/layout/About";
 import Services from "./components/layout/Services";
+import Cars from "./components/cars/Cars";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <About />
       <Services />
+      <Cars />
     </>
   );
 }

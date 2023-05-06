@@ -1,0 +1,93 @@
+.carsSection {
+  position: relative;
+}
+
+.carsSection h2 {
+  text-align: center;
+
+  color: #741906;
+  font-family: "Lora";
+  font-size: 46px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.carsSection h2::after {
+  content: "CARS";
+
+  position: absolute;
+  left: 50%;
+  top: -180%;
+  transform: translateX(-50%);
+
+  font-size: 126px;
+  font-weight: 700;
+
+  color: #ebebeb;
+
+  z-index: -1;
+}
+
+.carsContainer {
+  padding: 100px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carsBoxes {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  margin-top: 60px;
+}
+
+.pagination span {
+  width: 12px;
+  height: 12px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+}
+
+/* Arrow for slides */
+.arrowLeft,
+.arrowRight {
+  background: #741906;
+  color: white;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.arrowLeft svg,
+.arrowRight svg {
+  font-size: 16px;
+}
+
+.arrowLeft {
+  left: 5%;
+}
+.arrowRight {
+  right: 5%;
+}
