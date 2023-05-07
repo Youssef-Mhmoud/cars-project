@@ -19,7 +19,7 @@ const Cars = () => {
       <div className={classes.carsContainer}>
         <h2>Cars</h2>
         <div className={classes.carsBoxes}>
-          {data.map((car, i) => (
+          {data.slice(0, 3).map((car, i) => (
             <Car
               key={i}
               img={car.image}
@@ -32,10 +32,8 @@ const Cars = () => {
           ))}
         </div>
         <div className={classes.pagination}>
-          {data.map((carsPaginationLength) => (
-            <>
-              <span></span>
-            </>
+          {data.map((carsPaginationLength, i) => (
+            <span key={i}></span>
           ))}
         </div>
       </div>

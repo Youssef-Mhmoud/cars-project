@@ -1,0 +1,107 @@
+.testiSection {
+  background-color: #12273d;
+  height: 100vh;
+  position: relative;
+}
+
+.containerTesti {
+  padding: 100px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testiSection h2 {
+  text-align: center;
+
+  color: #fff;
+  font-family: "Lora";
+  font-size: 52px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.testiSection h2::after {
+  content: "TESTIMONIALS";
+
+  position: absolute;
+  left: 50%;
+  top: -125%;
+  transform: translateX(-50%);
+
+  font-size: 108px;
+  font-weight: 700;
+
+  color: #ebebeb;
+  opacity: 5%;
+
+  z-index: -1;
+}
+
+.cardTesti {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin-top: 64px;
+
+  background-color: #fff;
+  text-align: center;
+}
+
+.cardTesti p {
+  font-size: 24px;
+  font-style: italic;
+  color: #272727;
+  line-height: 1.6;
+
+  max-width: 90%;
+  margin: 0 auto 32px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  font-size: 22px;
+  margin-bottom: -10px;
+
+  color: #ebd8b8;
+}
+
+.cardTesti h3 {
+  color: #12273d;
+  font-size: 28px;
+}
+
+.carTestiCard {
+  position: relative;
+  padding: 36px 64px;
+}
+
+.carTestiCard img {
+  position: absolute;
+  right: -10%;
+  bottom: -15%;
+}
+
+.paginationTesti {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.paginationTesti span {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
