@@ -3,17 +3,17 @@ import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { CardContext } from "../../context/CardContext";
+import { CartContext } from "../../context/CartContext";
 
 const Header = () => {
-  const { setCardActive, carList } = useContext(CardContext);
+  const { setCartActive, carList } = useContext(CartContext);
 
   const totalAmount = carList.reduce((curNum, car) => {
     return curNum + car.quantity;
   }, 0);
 
-  const activeCard = () => {
-    setCardActive((prevActive) => !prevActive);
+  const activeCart = () => {
+    setCartActive((prevActive) => !prevActive);
   };
 
   return (
@@ -67,7 +67,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className={classes.cartItem}>
-            <button onClick={activeCard}>
+            <button onClick={activeCart}>
               <FontAwesomeIcon icon={faCartShopping} />
             </button>
             <div>{totalAmount}</div>

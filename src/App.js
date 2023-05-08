@@ -5,12 +5,12 @@ import Cars from "./components/cars/Cars";
 import Models from "./components/layout/Models";
 import Testimonials from "./components/layout/Testimonials";
 import Cart from "./components/cart/Cart";
-import CardProvider from "./context/CardContext";
+import CartProvider from "./context/CartContext";
 
 function App() {
   return (
     <>
-      <CardProvider>
+      <CartProvider>
         <Cart />
         <Header />
         <About />
@@ -18,7 +18,7 @@ function App() {
         <Cars />
         <Models />
         <Testimonials />
-      </CardProvider>
+      </CartProvider>
     </>
   );
 }

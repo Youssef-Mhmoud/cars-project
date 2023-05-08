@@ -2,31 +2,31 @@ import React, { useContext } from "react";
 import classes from "./Cart.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { CardContext } from "../../context/CardContext";
+import { CartContext } from "../../context/CartContext";
 
-const Card = () => {
+const Cart = () => {
   const {
-    cardActive,
+    cartActive,
     carList,
     setCarList,
     increaseCarCart,
     decreaseCarCart,
     removeCarCart,
-  } = useContext(CardContext);
+  } = useContext(CartContext);
 
   const removeAllCars = () => {
     setCarList([]);
   };
 
   return (
-    <div className={cardActive ? classes.active : classes.card}>
+    <div className={cartActive ? classes.active : classes.cart}>
       {carList &&
         carList.map((car) => (
-          <div className={classes.cardCar} key={car.name}>
+          <div className={classes.cartCar} key={car.name}>
             <div>
               <h3>{car.name}</h3>
               <p>{car.class}</p>
-              <div className={classes.flexCard}>
+              <div className={classes.flexCart}>
                 <button
                   className={classes.decrease}
                   onClick={() => decreaseCarCart({ name: car.name })}
@@ -69,4 +69,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Cart;

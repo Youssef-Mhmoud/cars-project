@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import classes from "./Car.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase, faUserGroup } from "@fortawesome/free-solid-svg-icons";
-import { CardContext } from "../../context/CardContext";
+import { CartContext } from "../../context/CartContext";
 
 const Car = (props) => {
-  const { increaseCarCart, decreaseCarCart } = useContext(CardContext);
+  const { increaseCarCart, decreaseCarCart } = useContext(CartContext);
 
   const increaseCar = () => {
     const carDetails = {

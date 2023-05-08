@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 
-export const CardContext = createContext();
+export const CartContext = createContext();
 
-const CardProvider = (props) => {
-  const [cardActive, setCardActive] = useState(false);
+const CartProvider = (props) => {
+  const [cartActive, setCartActive] = useState(false);
   const [carList, setCarList] = useState([]);
 
   const increaseCarCart = (carDetails) => {
@@ -57,10 +57,10 @@ const CardProvider = (props) => {
   };
 
   return (
-    <CardContext.Provider
+    <CartContext.Provider
       value={{
-        cardActive,
-        setCardActive,
+        cartActive,
+        setCartActive,
         carList,
         setCarList,
         increaseCarCart,
@@ -69,8 +69,8 @@ const CardProvider = (props) => {
       }}
     >
       {props.children}
-    </CardContext.Provider>
+    </CartContext.Provider>
   );
 };
 
-export default CardProvider;
+export default CartProvider;

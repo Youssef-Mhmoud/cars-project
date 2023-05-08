@@ -7,10 +7,10 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import dataCars from "../../data.json";
-import { CardContext } from "../../context/CardContext";
+import { CartContext } from "../../context/CartContext";
 
 const Cars = () => {
-  const { carList } = useContext(CardContext);
+  const { carList } = useContext(CartContext);
 
   const [data, setData] = useState(dataCars.cars);
 

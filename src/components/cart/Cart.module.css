@@ -1,4 +1,4 @@
-.card {
+.cart {
   position: fixed;
   height: 90vh;
   width: 350px;
@@ -34,7 +34,7 @@
   transition: all 0.4s ease-out;
 }
 
-.cardCar {
+.cartCar {
   padding: 20px 26px;
   background-color: #fff;
 
@@ -46,21 +46,21 @@
   margin-top: 24px;
 }
 
-.cardCar img {
+.cartCar img {
   width: 50%;
 }
 
-.cardCar h3 {
+.cartCar h3 {
   color: #741906;
   margin: 0;
 }
 
-.cardCar p {
+.cartCar p {
   color: #232222f5;
   font-size: 12px;
 }
 
-.flexCard {
+.flexCart {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -68,7 +68,7 @@
   margin-top: 24px;
 }
 
-.flexCard button {
+.flexCart button {
   border: none;
   cursor: pointer;
 }
@@ -90,7 +90,7 @@
   font-size: 24px;
 }
 
-.flexCard span {
+.flexCart span {
   color: #12273d;
   font-size: 20px;
 }
