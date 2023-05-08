@@ -7,12 +7,17 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Testimonials = () => {
   const [testiData, setTestiData] = useState(data.testimonials);
+  const [page, setPage] = useState(data.testimonials);
+
+  const pagiTest = (index) => {
+    setPage(() => testiData.slice(index, index + 1));
+  };
 
   return (
     <section className={classes.testiSection}>
       <div className={classes.containerTesti}>
         <h2>Testimonials</h2>
-        {testiData.slice(0, 1).map((testi, i) => (
+        {page.slice(0, 1).map((testi, i) => (
           <div className={classes.cardTesti} key={i}>
             <div className={classes.carTestiCard}>
               <p>{testi.description}</p>
@@ -33,7 +38,7 @@ const Testimonials = () => {
 
         <div className={classes.paginationTesti}>
           {testiData.map((testiLength, i) => (
-            <span key={i}></span>
+            <span key={i} onClick={() => pagiTest(i)}></span>
           ))}
         </div>
       </div>

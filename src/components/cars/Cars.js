@@ -14,15 +14,21 @@ const Cars = () => {
 
   const [data, setData] = useState(dataCars.cars);
 
+  const sliceDataCars = () => {
+    // setData((prevData) => {
+    //   return prevData.slice(2, 5);
+    // });
+  };
+
   return (
     <section className={classes.carsSection}>
-      <button className={classes.arrowLeft}>
+      <button className={classes.arrowLeft} onClick={sliceDataCars}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <div className={classes.carsContainer}>
         <h2>Cars</h2>
         <div className={classes.carsBoxes}>
-          {data.slice(0, 3).map((car, i) => (
+          {data.map((car, i) => (
             <Car
               key={i}
               img={car.image}

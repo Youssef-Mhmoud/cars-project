@@ -6,6 +6,8 @@ import Models from "./components/layout/Models";
 import Testimonials from "./components/layout/Testimonials";
 import Cart from "./components/cart/Cart";
 import CartProvider from "./context/CartContext";
+import CarsCompany from "./components/layout/CarsCompany";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Cars />
         <Models />
         <Testimonials />
+        <CarsCompany />
+        <Footer />
       </CartProvider>
     </>
   );
