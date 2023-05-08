@@ -5,11 +5,33 @@
   background-color: #12273d;
   /* mix-blend-mode: multiply; */
   backdrop-filter: blur(25px);
-  right: 0;
+  right: -100%;
   bottom: 0;
 
   padding: 20px;
   z-index: 22;
+
+  overflow: scroll;
+
+  transition: all 0.4s ease-out;
+}
+
+.active {
+  position: fixed;
+  height: 90vh;
+  width: 350px;
+  background-color: #12273d;
+  /* mix-blend-mode: multiply; */
+  backdrop-filter: blur(25px);
+  right: 0;
+  bottom: 0;
+
+  overflow: auto;
+
+  padding: 20px;
+  z-index: 22;
+
+  transition: all 0.4s ease-out;
 }
 
 .cardCar {
@@ -20,6 +42,8 @@
   align-items: center;
 
   gap: 20px;
+
+  margin-top: 24px;
 }
 
 .cardCar img {
@@ -82,16 +106,18 @@
 .trash {
   background-color: transparent;
   font-size: 22px;
-  color: #2c2a2a;
 
+  color: #2c2a2a;
   align-self: flex-end;
 }
 
 .clearAll {
-  position: absolute;
+  /* position: absolute;
   bottom: 30px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
+
+  margin: 100% auto 0;
 
   background-color: #741906;
   color: #fff;
@@ -101,4 +127,15 @@
 
   padding: 8px 16px;
   border: none;
+
+  display: flex;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.empty {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
 }

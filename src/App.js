@@ -4,18 +4,21 @@ import Services from "./components/layout/Services";
 import Cars from "./components/cars/Cars";
 import Models from "./components/layout/Models";
 import Testimonials from "./components/layout/Testimonials";
-import Card from "./components/card/Card";
+import Cart from "./components/cart/Cart";
+import CardProvider from "./context/CardContext";
 
 function App() {
   return (
     <>
-      <Card />
-      <Header />
-      <About />
-      <Services />
-      <Cars />
-      <Models />
-      <Testimonials />
+      <CardProvider>
+        <Cart />
+        <Header />
+        <About />
+        <Services />
+        <Cars />
+        <Models />
+        <Testimonials />
+      </CardProvider>
     </>
   );
 }

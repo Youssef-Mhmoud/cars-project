@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./Cars.module.css";
 import Car from "./Car";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,11 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import dataCars from "../../data.json";
+import { CardContext } from "../../context/CardContext";
 
 const Cars = () => {
+  const { carList } = useContext(CardContext);
+
   const [data, setData] = useState(dataCars.cars);
 
   return (
@@ -28,6 +31,7 @@ const Cars = () => {
               desc={car.description}
               seats={car.seats}
               luggage={car.luggage}
+              carItem={carList.find((c) => c.name === car.name)}
             />
           ))}
         </div>

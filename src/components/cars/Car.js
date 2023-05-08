@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Car.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcase, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { CardContext } from "../../context/CardContext";
 
 const Car = (props) => {
+  const { increaseCarCart, decreaseCarCart } = useContext(CardContext);
+
+  const increaseCar = () => {
+    const carDetails = {
+      name: props.name,
+      class: props.class,
+      img: props.img,
+    };
+
+    increaseCarCart(carDetails);
+  };
+
+  const removeCar = () => {
+    decreaseCarCart({ name: props.name });
+  };
+
   return (
     <div className={classes.cardCar}>
-      <img src={props.img} alt={props.title} />
+      <img src={props.img} alt={props.name} />
       <h3>{props.name}</h3>
       <p className={classes.carClass}>{props.class}</p>
       <p className={classes.carDesc}>{props.desc}</p>
@@ -24,9 +41,17 @@ const Car = (props) => {
           </div>
         </div>
         <div className={classes.btnBuy}>
-          <button className={classes.decrease}>-</button>
-          <span>0</span>
-          <button className={classes.increase}>+</button>
+          <button className={classes.decrease} onClick={removeCar}>
+            -
+          </button>
+          {props.carItem ? (
+            <span>{props.carItem.quantity}</span>
+          ) : (
+            <span>0</span>
+          )}
+          <button className={classes.increase} onClick={increaseCar}>
+            +
+          </button>
         </div>
       </div>
     </div>

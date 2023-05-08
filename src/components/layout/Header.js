@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { CardContext } from "../../context/CardContext";
 
 const Header = () => {
+  const { setCardActive, carList } = useContext(CardContext);
+
+  const totalAmount = carList.reduce((curNum, car) => {
+    return curNum + car.quantity;
+  }, 0);
+
+  const activeCard = () => {
+    setCardActive((prevActive) => !prevActive);
+  };
+
   return (
     <header className={classes.header}>
       <nav>
@@ -56,10 +67,10 @@ const Header = () => {
             </NavLink>
           </li>
           <li className={classes.cartItem}>
-            <button>
+            <button onClick={activeCard}>
               <FontAwesomeIcon icon={faCartShopping} />
             </button>
-            <div>0</div>
+            <div>{totalAmount}</div>
           </li>
         </ul>
       </nav>
