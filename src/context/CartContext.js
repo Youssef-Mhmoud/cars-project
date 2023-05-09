@@ -42,7 +42,7 @@ const CartProvider = (props) => {
       setCarList((prevCar) => {
         return prevCar.map((car) =>
           car.name === name
-            ? { ...carExist, quantity: carExist.quantity-- }
+            ? { ...carExist, quantity: carExist.quantity - 1 }
             : { ...car }
         );
       });
