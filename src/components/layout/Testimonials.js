@@ -7,34 +7,34 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Testimonials = () => {
   const [testiData, setTestiData] = useState(data.testimonials);
-  const [page, setPage] = useState(data.testimonials);
   const [count, setCount] = useState(0);
 
-  // const pagiTest = useCallback(
-  //   (index) => {
-  //     setPage(() => testiData.slice(index, index + 1));
-  //     setCount(index);
-  //   },
-  //   [testiData]
-  // );
+  // const pagiTest = (index) => {
+  //   setCount(index);
+  //   console.log("Index", index);
+  // };
 
   useEffect(() => {
-    setInterval(() => {
+    console.log("count", count);
+    setTimeout(() => {
       setCount(count + 1);
     }, 5000);
 
     if (count === 4) return setCount(0);
-
-    setPage(() => testiData.slice(count, count + 1));
-  }, [count, testiData]);
+  }, [count]);
 
   return (
     <section className={classes.testiSection}>
       <div className={classes.containerTesti}>
         <h2>Testimonials</h2>
 
-        {page.map((testi, i) => (
-          <div className={classes.cardTesti} key={i}>
+        {testiData.map((testi, i) => (
+          <div
+            className={`${classes.cardTesti} ${
+              count === i ? classes.activeCard : ""
+            }`}
+            key={i}
+          >
             <div className={classes.carTestiCard}>
               <p>{testi.description}</p>
               <div className={classes.stars}>
@@ -57,7 +57,7 @@ const Testimonials = () => {
             <span
               key={i}
               // onClick={() => pagiTest(i)}
-              className={testiLength === page[0] ? classes.active : null}
+              className={count === i ? classes.active : ""}
             ></span>
           ))}
         </div>

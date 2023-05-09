@@ -72,6 +72,16 @@
   color: #ebd8b8;
 }
 
+.cardTesti {
+  opacity: 0;
+
+  transition: all 0.4s;
+}
+
+.activeCard {
+  opacity: 1 !important;
+}
+
 .cardTesti h3 {
   color: #12273d;
   font-size: 28px;
