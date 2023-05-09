@@ -44,7 +44,9 @@ const Header = () => {
                 <NavHashLink
                   to="#"
                   smooth
-                  className={window.location.hash === "" ? classes.active : ""}
+                  className={() =>
+                    window.location.hash === "" ? classes.active : ""
+                  }
                 >
                   Home
                 </NavHashLink>

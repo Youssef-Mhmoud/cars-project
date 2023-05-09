@@ -12,16 +12,17 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <footer>
       <div className={classes.contFooter}>
         <div className={classes.contLogo}>
-          <Link to=".." className={classes.logo}>
+          <NavHashLink smooth to="#" className={classes.logo}>
             <span>Your</span>
             Car
-          </Link>
+          </NavHashLink>
           <p>
             We are known for luxurious and premium chaffeur services worldwide.
             We are simply the best you can find.
