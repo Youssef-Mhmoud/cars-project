@@ -4,8 +4,8 @@ export const CartContext = createContext();
 
 const CartProvider = (props) => {
   const [cartActive, setCartActive] = useState(false);
-
-  const [carList, setCarList] = useState([]);
+  const validateLocal = JSON.parse(localStorage.getItem("cars")) || [];
+  const [carList, setCarList] = useState(validateLocal);
 
   useEffect(() => {
     localStorage.setItem("cars", JSON.stringify(carList));
