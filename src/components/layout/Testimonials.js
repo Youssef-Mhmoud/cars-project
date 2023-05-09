@@ -15,10 +15,11 @@ const Testimonials = () => {
   // };
 
   useEffect(() => {
-    console.log("count", count);
     setTimeout(() => {
       setCount(count + 1);
     }, 5000);
+
+    console.log(count);
 
     if (count === 4) return setCount(0);
   }, [count]);

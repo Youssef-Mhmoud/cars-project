@@ -74,11 +74,13 @@
 
 .cardTesti {
   opacity: 0;
+  transform: translate(100%, -50%);
 
-  transition: all 0.4s;
+  transition: all 1s;
 }
 
 .activeCard {
+  transform: translate(-50%, -50%);
   opacity: 1 !important;
 }
 
