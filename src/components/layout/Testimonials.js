@@ -19,8 +19,6 @@ const Testimonials = () => {
       setCount(count + 1);
     }, 5000);
 
-    console.log(count);
-
     if (count === 4) return setCount(0);
   }, [count]);
 

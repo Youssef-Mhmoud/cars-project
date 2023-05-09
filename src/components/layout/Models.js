@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Models.module.css";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Models = () => {
   return (
@@ -26,9 +26,9 @@ const Models = () => {
         <div>
           <h3>Tesla Model 3</h3>
           <p>Disruptive, avant-garde, futuristic, innovative.</p>
-          <NavHashLink smooth to="/#contact-us">
+          <Link smooth to="/#contact-us">
             Contact
-          </NavHashLink>
+          </Link>
         </div>
       </div>
       <img

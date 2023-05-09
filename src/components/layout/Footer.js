@@ -11,17 +11,17 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <footer id="contact-us">
       <div className={classes.contFooter}>
         <div className={classes.contLogo}>
-          <NavHashLink smooth to="#" className={classes.logo}>
+          <Link smooth to="#" className={classes.logo}>
             <span>Your</span>
             Car
-          </NavHashLink>
+          </Link>
           <p>
             We are known for luxurious and premium chaffeur services worldwide.
             We are simply the best you can find.
@@ -52,13 +52,13 @@ const Footer = () => {
                 <br /> Las Vegas, United States
               </span>
             </p>
-            <p className={classes.phone}>
+            <div className={classes.phone}>
               <FontAwesomeIcon icon={faPhone} />
               <div>
                 <a href="tel:01444773421423">01444773421423</a>
                 <a href="tel:01477678449405">01477678449405</a>
               </div>
-            </p>
+            </div>
             <p className={classes.mail}>
               <FontAwesomeIcon icon={faEnvelope} />
               <a href="mailto:info@YourCar.com">info@YourCar.com</a>

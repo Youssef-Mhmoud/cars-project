@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 const Header = () => {
   const { setCartActive, carList } = useContext(CartContext);
@@ -32,12 +32,12 @@ const Header = () => {
     >
       <nav className={sticky ? classes.sticky : ""} ref={navRef}>
         <div className={classes.nav}>
-          <NavHashLink smooth to="#">
+          <HashLink smooth to="#">
             <div className={classes.logo}>
               <span>Your</span>
               <span>Car</span>
             </div>
-          </NavHashLink>
+          </HashLink>
           <div className={classes.navCartFlex}>
             <ul className={showMenu ? classes.showMenu : ""}>
               <li>
@@ -97,7 +97,7 @@ const Header = () => {
               </li>
             </ul>
             <div className={classes.cartItem}>
-              <button onClick={activeCart}>
+              <button onClick={activeCart} aria-label="cart contains cars">
                 <svg
                   width="42"
                   height="36"
@@ -131,7 +131,7 @@ const Header = () => {
             We offer a wide range of cars that cater to your needs and budget.
             Visit us today and drive away with your dream car!
           </p>
-          <NavHashLink smooth to="/#cars">
+          <HashLink smooth to="/#cars">
             <span>Discover</span>
             <span>
               <svg
@@ -151,7 +151,7 @@ const Header = () => {
                 />
               </svg>
             </span>
-          </NavHashLink>
+          </HashLink>
         </div>
       </div>
     </header>

@@ -23,21 +23,27 @@ const Cars = () => {
 
   const nextBtn = () => {
     setCount(count + 1);
-    if (count === data.length - 3) return setCount(3);
 
     setPage(() => data.slice(count + 1, count + 4));
+
+    if (count === data.length - 4) return setCount(2);
   };
 
   const prevBtn = () => {
-    setCount(count - 1);
-    if (count === -1) return setCount(0);
-
     setPage(() => data.slice(count, count + 3));
+
+    setCount(count - 1);
+
+    if (count === 0) return setCount(0);
   };
 
   return (
     <section className={classes.carsSection} id="cars">
-      <button className={classes.arrowLeft} onClick={prevBtn}>
+      <button
+        className={classes.arrowLeft}
+        onClick={prevBtn}
+        aria-label="prev button slide"
+      >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <div className={classes.carsContainer}>
@@ -66,7 +72,11 @@ const Cars = () => {
           ))}
         </div>
       </div>
-      <button className={classes.arrowRight} onClick={nextBtn}>
+      <button
+        className={classes.arrowRight}
+        onClick={nextBtn}
+        aria-label="next button slide"
+      >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </section>
