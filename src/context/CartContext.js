@@ -5,9 +5,7 @@ export const CartContext = createContext();
 const CartProvider = (props) => {
   const [cartActive, setCartActive] = useState(false);
 
-  const [carList, setCarList] = useState(
-    JSON.parse(localStorage.getItem("cars"))
-  );
+  const [carList, setCarList] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("cars", JSON.stringify(carList));
