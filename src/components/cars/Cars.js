@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import classes from "./Cars.module.css";
 import Car from "./Car";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,26 +15,31 @@ const Cars = () => {
   const [data, setData] = useState(dataCars.cars);
   const [page, setPage] = useState(dataCars.cars);
   const [count, setCount] = useState(0);
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(3);
 
   const sliceDataCars = (index) => {
     setPage(() => data.slice(index, index + 3));
     setCount(index);
   };
 
+  useEffect(() => {
+    setStart(count * 1);
+    setEnd(count + 3);
+
+    setPage(() => data.slice(start, end));
+  }, [count, start, end, data]);
+
   const nextBtn = () => {
+    if (end === 6) return setCount(3);
+
     setCount(count + 1);
-
-    setPage(() => data.slice(count + 1, count + 4));
-
-    if (count === data.length - 4) return setCount(2);
   };
 
   const prevBtn = () => {
-    setPage(() => data.slice(count, count + 3));
+    if (count === 0) return setCount(0);
 
     setCount(count - 1);
-
-    if (count === 0) return setCount(0);
   };
 
   return (
