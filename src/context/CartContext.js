@@ -32,7 +32,6 @@ const CartProvider = (props) => {
 
     const carExist = carList.find((car) => car.name === name);
     if (!carExist) return;
-    console.log(carExist);
 
     if (carExist.quantity === 1) {
       setCarList((prevCar) => {

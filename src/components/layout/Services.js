@@ -9,7 +9,7 @@ import {
 
 const Services = () => {
   return (
-    <section className={classes.servicesSection}>
+    <section className={classes.servicesSection} id="services">
       <div className={classes.container}>
         <h2>Services</h2>
         <div className={classes.boxes}>

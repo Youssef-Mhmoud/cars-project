@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
+import { NavHashLink } from "react-router-hash-link";
 
 const Header = () => {
   const { setCartActive, carList } = useContext(CartContext);
@@ -32,53 +32,66 @@ const Header = () => {
     >
       <nav className={sticky ? classes.sticky : ""} ref={navRef}>
         <div className={classes.nav}>
-          <NavLink to="..">
+          <NavHashLink smooth to="#">
             <div className={classes.logo}>
               <span>Your</span>
               <span>Car</span>
             </div>
-          </NavLink>
+          </NavHashLink>
           <div className={classes.navCartFlex}>
             <ul className={showMenu ? classes.showMenu : ""}>
               <li>
-                <NavLink
-                  to=".."
-                  className={({ isActive }) => (isActive ? classes.active : "")}
+                <NavHashLink
+                  to="#"
+                  smooth
+                  className={window.location.hash === "" ? classes.active : ""}
                 >
                   Home
-                </NavLink>
+                </NavHashLink>
               </li>
               <li>
-                <NavLink
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  to="about"
+                <NavHashLink
+                  smooth
+                  className={() =>
+                    window.location.hash === "#about" ? classes.active : ""
+                  }
+                  to="/#about"
                 >
                   About
-                </NavLink>
+                </NavHashLink>
               </li>
               <li>
-                <NavLink
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  to="services"
+                <NavHashLink
+                  to="/#services"
+                  smooth
+                  className={() =>
+                    window.location.hash === "#services" ? classes.active : ""
+                  }
                 >
                   Services
-                </NavLink>
+                </NavHashLink>
               </li>
               <li>
-                <NavLink
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  to="cars"
+                <NavHashLink
+                  to="/#cars"
+                  smooth
+                  className={() =>
+                    window.location.hash === "#cars" ? classes.active : ""
+                  }
                 >
                   Cars
-                </NavLink>
+                </NavHashLink>
               </li>
               <li>
-                <NavLink
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  to="contact-us"
+                <NavHashLink
+                  smooth
+                  className={() =>
+                    window.location.hash === "#contact-us" ? classes.active : ""
+                  }
+                  to="/#contact-us"
                 >
                   Contact us
-                </NavLink>
+                </NavHashLink>
               </li>
             </ul>
             <div className={classes.cartItem}>

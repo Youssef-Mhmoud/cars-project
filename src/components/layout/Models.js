@@ -3,7 +3,7 @@ import classes from "./Models.module.css";
 
 const Models = () => {
   return (
-    <section className={classes.modelsSection}>
+    <section className={classes.modelsSection} id="contact-us">
       <img
         src={require("../../assets/cars-model/Car-1.png")}
         className={classes.imgHidden}

@@ -36,7 +36,7 @@ const Cars = () => {
   };
 
   return (
-    <section className={classes.carsSection}>
+    <section className={classes.carsSection} id="cars">
       <button className={classes.arrowLeft} onClick={prevBtn}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
