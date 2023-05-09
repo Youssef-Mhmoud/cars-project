@@ -18,14 +18,14 @@ const Cars = () => {
 
   const sliceDataCars = (index) => {
     setPage(() => data.slice(index, index + 3));
-    setCount(index - 1);
+    setCount(index);
   };
 
   const nextBtn = () => {
     setCount(count + 1);
-    if (count === data.length - 2) return setCount(3);
+    if (count === data.length - 3) return setCount(3);
 
-    setPage(() => data.slice(count + 2, count + 5));
+    setPage(() => data.slice(count + 1, count + 4));
   };
 
   const prevBtn = () => {
@@ -57,13 +57,11 @@ const Cars = () => {
           ))}
         </div>
         <div className={classes.pagination}>
-          {data.map((carsPaginationLength, i) => (
+          {data.slice(0, 4).map((carsPaginationLength, i) => (
             <span
               key={i}
               onClick={() => sliceDataCars(i)}
-              className={
-                carsPaginationLength === page[0] ? classes.active : null
-              }
+              className={carsPaginationLength === page[0] ? classes.active : ""}
             ></span>
           ))}
         </div>

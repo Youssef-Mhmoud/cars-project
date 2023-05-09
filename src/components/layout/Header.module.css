@@ -178,11 +178,13 @@ a.active {
   font-weight: 700;
 }
 
-.innerHeroInfo button {
+.innerHeroInfo a {
   display: flex;
   align-items: center;
   gap: 16px;
 
+  width: fit-content;
+  text-decoration: none;
   padding: 10px 20px;
   margin-top: 42px;
   margin-left: auto;
@@ -200,12 +202,12 @@ a.active {
   transition: all 0.3s;
 }
 
-.innerHeroInfo button:hover {
+.innerHeroInfo a:hover {
   background-color: #fff;
   color: #000;
 }
 
-.innerHeroInfo button:hover path {
+.innerHeroInfo a:hover path {
   stroke: #000;
 }
 
@@ -315,7 +317,7 @@ a.active {
     margin-top: 200px;
   }
 
-  .innerHeroInfo button {
+  .innerHeroInfo a {
     margin: 42px auto;
   }
 

@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./Models.module.css";
+import { NavHashLink } from "react-router-hash-link";
 
 const Models = () => {
   return (
-    <section className={classes.modelsSection} id="contact-us">
+    <section className={classes.modelsSection}>
       <img
         src={require("../../assets/cars-model/Car-1.png")}
         className={classes.imgHidden}
@@ -25,7 +26,9 @@ const Models = () => {
         <div>
           <h3>Tesla Model 3</h3>
           <p>Disruptive, avant-garde, futuristic, innovative.</p>
-          <button>Contact</button>
+          <NavHashLink smooth to="/#contact-us">
+            Contact
+          </NavHashLink>
         </div>
       </div>
       <img
