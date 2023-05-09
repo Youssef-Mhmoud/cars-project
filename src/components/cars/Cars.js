@@ -18,7 +18,7 @@ const Cars = () => {
 
   const sliceDataCars = (index) => {
     setPage(() => data.slice(index, index + 3));
-    // setCount(index);
+    setCount(index - 1);
   };
 
   const nextBtn = () => {
