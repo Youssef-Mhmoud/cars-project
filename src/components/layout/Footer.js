@@ -41,11 +41,6 @@ const Footer = () => {
             <input type="text" placeholder="Email" />
             <button>Subscribe</button>
           </form>
-          <div className={classes.socialIcons}>
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
         </div>
         <div className={classes.contContact}>
           <h4 className={classes.titleContact}>Contact</h4>
@@ -70,6 +65,11 @@ const Footer = () => {
             </p>
           </address>
         </div>
+      </div>
+      <div className={classes.socialIcons}>
+        <FontAwesomeIcon icon={faFacebook} />
+        <FontAwesomeIcon icon={faTwitter} />
+        <FontAwesomeIcon icon={faInstagram} />
       </div>
       <div className={classes.copyRight}>
         <p>

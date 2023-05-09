@@ -30,15 +30,17 @@
 }
 
 .carsContainer {
+  overflow: auto;
   padding: 100px 64px;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .carsBoxes {
   display: flex;
-  align-items: center;
+  /* display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 30%); */
   gap: 32px;
 }
 
@@ -58,6 +60,10 @@
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #741906;
 }
 
 /* Arrow for slides */
@@ -92,4 +98,20 @@
 }
 .arrowRight {
   right: 5%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carsSection h2 {
+    font-size: 42px;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
+
+  .carsSection h2::after {
+    font-size: 92px;
+  }
 }

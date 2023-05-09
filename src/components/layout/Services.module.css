@@ -40,12 +40,49 @@
 }
 
 .boxes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 64px;
 
   text-align: center;
 
   margin-top: 100px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .servicesSection {
+    height: 100vh;
+  }
+
+  .servicesSection h2 {
+    font-size: 42px;
+  }
+
+  .servicesSection h2::after {
+    font-size: 72px;
+  }
+
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 668px) {
+  .servicesSection {
+    height: 125vh;
+  }
+
+  .boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .boxes {
+    gap: 20px;
+  }
+
+  .servicesSection .container {
+    padding: 80px 32px;
+  }
 }

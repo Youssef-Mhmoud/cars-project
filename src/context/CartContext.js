@@ -1,10 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 const CartProvider = (props) => {
   const [cartActive, setCartActive] = useState(false);
-  const [carList, setCarList] = useState([]);
+
+  const [carList, setCarList] = useState(
+    JSON.parse(localStorage.getItem("cars"))
+  );
+
+  useEffect(() => {
+    localStorage.setItem("cars", JSON.stringify(carList));
+  }, [carList]);
 
   const increaseCarCart = (carDetails) => {
     const carExist = carList.find((car) => car.name === carDetails.name);

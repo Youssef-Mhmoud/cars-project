@@ -51,3 +51,57 @@
 
   width: 100%;
 }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .aboutSection h2 {
+    font-size: 46px;
+  }
+
+  .aboutSection h2::after {
+    font-size: 86px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .aboutSection h2::after {
+    font-size: 72px;
+  }
+
+  .imgCar img:last-child {
+    width: 320px;
+  }
+}
+
+@media (max-width: 880px) {
+  .aboutSection h2::after {
+    font-size: 68px;
+  }
+
+  .imgCar img:last-child {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 100px 32px;
+    max-width: 1400px;
+  }
+
+  .aboutSection h2 {
+    text-align: center;
+  }
+
+  .aboutSection h2::after {
+    width: 300px;
+    font-size: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -70%;
+  }
+
+  .imgCar {
+    display: none;
+  }
+}

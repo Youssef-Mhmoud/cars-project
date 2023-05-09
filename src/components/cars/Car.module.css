@@ -1,7 +1,14 @@
 .cardCar {
   padding: 40px;
-  height: 450px;
+  /* height: 450px; */
+
   box-shadow: 4px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardCar img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .cardCar h3 {
@@ -9,7 +16,7 @@
   font-size: 24px;
 
   color: #741906;
-  margin: 12px 0 -2px;
+  margin: 12px 0 0;
 }
 
 .carClass {

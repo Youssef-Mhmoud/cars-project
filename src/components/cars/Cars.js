@@ -13,22 +13,37 @@ const Cars = () => {
   const { carList } = useContext(CartContext);
 
   const [data, setData] = useState(dataCars.cars);
+  const [page, setPage] = useState(dataCars.cars);
+  const [count, setCount] = useState(0);
 
-  const sliceDataCars = () => {
-    // setData((prevData) => {
-    //   return prevData.slice(2, 5);
-    // });
+  const sliceDataCars = (index) => {
+    setPage(() => data.slice(index, index + 3));
+    // setCount(index);
+  };
+
+  const nextBtn = () => {
+    setCount(count + 1);
+    if (count === data.length - 2) return setCount(3);
+
+    setPage(() => data.slice(count + 2, count + 5));
+  };
+
+  const prevBtn = () => {
+    setCount(count - 1);
+    if (count === -1) return setCount(0);
+
+    setPage(() => data.slice(count, count + 3));
   };
 
   return (
     <section className={classes.carsSection}>
-      <button className={classes.arrowLeft} onClick={sliceDataCars}>
+      <button className={classes.arrowLeft} onClick={prevBtn}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <div className={classes.carsContainer}>
         <h2>Cars</h2>
         <div className={classes.carsBoxes}>
-          {data.map((car, i) => (
+          {page.slice(0, 3).map((car, i) => (
             <Car
               key={i}
               img={car.image}
@@ -43,11 +58,17 @@ const Cars = () => {
         </div>
         <div className={classes.pagination}>
           {data.map((carsPaginationLength, i) => (
-            <span key={i}></span>
+            <span
+              key={i}
+              onClick={() => sliceDataCars(i)}
+              className={
+                carsPaginationLength === page[0] ? classes.active : null
+              }
+            ></span>
           ))}
         </div>
       </div>
-      <button className={classes.arrowRight}>
+      <button className={classes.arrowRight} onClick={nextBtn}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </section>

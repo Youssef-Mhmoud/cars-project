@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classes from "./Cart.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faClose, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 
 const Cart = () => {
@@ -12,14 +12,22 @@ const Cart = () => {
     increaseCarCart,
     decreaseCarCart,
     removeCarCart,
+    setCartActive,
   } = useContext(CartContext);
 
   const removeAllCars = () => {
     setCarList([]);
   };
 
+  const closeCart = () => {
+    setCartActive(false);
+  };
+
   return (
     <div className={cartActive ? classes.active : classes.cart}>
+      <div className={classes.closeCart} onClick={closeCart}>
+        <FontAwesomeIcon icon={faClose} />
+      </div>
       {carList &&
         carList.map((car) => (
           <div className={classes.cartCar} key={car.name}>

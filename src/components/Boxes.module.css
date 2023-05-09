@@ -10,3 +10,14 @@
   margin: 46px 0 -5px;
   font-size: 24px;
 }
+
+/* Responsive */
+@media (max-width: 500px) {
+  .box svg {
+    font-size: 32px;
+  }
+
+  .box h3 {
+    margin: 24px 0 -5px;
+  }
+}

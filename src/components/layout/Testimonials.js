@@ -38,7 +38,11 @@ const Testimonials = () => {
 
         <div className={classes.paginationTesti}>
           {testiData.map((testiLength, i) => (
-            <span key={i} onClick={() => pagiTest(i)}></span>
+            <span
+              key={i}
+              onClick={() => pagiTest(i)}
+              className={testiLength === page[0] ? classes.active : null}
+            ></span>
           ))}
         </div>
       </div>
