@@ -6,7 +6,7 @@
   /* mix-blend-mode: multiply; */
   backdrop-filter: blur(25px);
   right: -115%;
-  bottom: 0;
+  /* bottom: 0; */
 
   padding: 20px;
   z-index: 22;
@@ -31,7 +31,8 @@
   /* mix-blend-mode: multiply; */
   backdrop-filter: blur(25px);
   right: 0;
-  bottom: 0;
+
+  /* bottom: 0; */
 
   overflow: auto;
 
@@ -147,14 +148,25 @@
   font-size: 24px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+  .cart {
+    width: 100%;
+
+    padding-right: 0;
+  }
+
   .active {
     width: 100%;
-    padding: 0;
+
+    padding-right: 0;
   }
 
   .cartCar {
     width: 80%;
     margin: 0 auto;
+  }
+
+  .closeCart {
+    margin: 30px 20px;
   }
 }
