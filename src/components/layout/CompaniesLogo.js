@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./CarsCompany.module.css";
+import classes from "./CompaniesLogo.module.css";
 
-const CarsCompany = () => {
+const CompaniesLogo = () => {
   return (
     <div className={classes.carsCompany}>
       <div className={classes.contCompany}>
@@ -33,4 +33,4 @@ const CarsCompany = () => {
   );
 };
 
-export default CarsCompany;
+export default CompaniesLogo;

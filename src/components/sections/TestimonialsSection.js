@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import classes from "./Testimonials.module.css";
+import classes from "./TestimonialsSection.module.css";
 import { useState } from "react";
 import data from "../../data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-const Testimonials = () => {
+const TestimonialsSection = () => {
   const [testiData, setTestiData] = useState(data.testimonials);
   const [count, setCount] = useState(0);
 
@@ -64,4 +64,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsSection;

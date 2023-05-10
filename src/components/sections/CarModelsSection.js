@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./Models.module.css";
+import classes from "./CarModelsSection.module.css";
 import { Link } from "react-router-dom";
 
-const Models = () => {
+const CarModelsSection = () => {
   return (
     <section className={classes.modelsSection}>
       <picture>
@@ -148,4 +148,4 @@ const Models = () => {
   );
 };
 
-export default Models;
+export default CarModelsSection;

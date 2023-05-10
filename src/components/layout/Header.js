@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
+import NavigationLink from "./NavigationLink";
 
 const Header = () => {
   const { setCartActive, carList } = useContext(CartContext);
@@ -44,62 +45,36 @@ const Header = () => {
           </NavLink>
           <div className={classes.navCartFlex}>
             <ul className={showMenu ? classes.showMenu : ""}>
-              <li>
-                <NavLink
-                  to=""
-                  onClick={() => {
-                    reachSectionHandler("");
-                  }}
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  end
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  onClick={() => {
-                    reachSectionHandler("about");
-                  }}
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  onClick={() => {
-                    reachSectionHandler("services");
-                  }}
-                >
-                  Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/cars"
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  onClick={() => {
-                    reachSectionHandler("cars");
-                  }}
-                >
-                  Cars
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact-us"
-                  className={({ isActive }) => (isActive ? classes.active : "")}
-                  onClick={() => {
-                    reachSectionHandler("contact-us");
-                  }}
-                >
-                  Contact us
-                </NavLink>
-              </li>
+              <NavigationLink
+                to=""
+                hashSection=""
+                sectionName="Home"
+                classActive={classes.active}
+              />
+              <NavigationLink
+                to="/about"
+                hashSection="about"
+                sectionName="About"
+                classActive={classes.active}
+              />
+              <NavigationLink
+                to="/services"
+                hashSection="services"
+                sectionName="Services"
+                classActive={classes.active}
+              />
+              <NavigationLink
+                to="/cars"
+                hashSection="cars"
+                sectionName="Cars"
+                classActive={classes.active}
+              />
+              <NavigationLink
+                to="/contact-us"
+                hashSection="contact-us"
+                sectionName="Contact us"
+                classActive={classes.active}
+              />
             </ul>
             <div className={classes.cartItem}>
               <button onClick={activeCart} aria-label="cart contains cars">

@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./About.module.css";
+import classes from "./AboutSection.module.css";
 
-const About = () => {
+const AboutSection = () => {
   return (
     <section className={classes.aboutSection} id="about">
       <div>
@@ -54,4 +54,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

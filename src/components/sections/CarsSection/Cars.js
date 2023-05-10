@@ -6,8 +6,8 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import dataCars from "../../data.json";
-import { CartContext } from "../../context/CartContext";
+import dataCars from "../../../data.json";
+import { CartContext } from "../../../context/CartContext";
 
 const Cars = () => {
   const { carList } = useContext(CartContext);

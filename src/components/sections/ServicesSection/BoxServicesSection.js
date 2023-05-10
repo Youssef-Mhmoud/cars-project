@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import classes from "./Boxes.module.css";
+import classes from "./BoxServicesSection.module.css";
 
-const BoxServicesSec = (props) => {
+const BoxServicesSection = (props) => {
   return (
     <div className={classes.box}>
       <FontAwesomeIcon icon={props.icon} />
@@ -12,4 +12,4 @@ const BoxServicesSec = (props) => {
   );
 };
 
-export default BoxServicesSec;
+export default BoxServicesSection;
