@@ -5,10 +5,9 @@
   background-position: center center;
 
   position: relative;
-  /* padding-top: 100px; */
   padding-bottom: 100px;
 
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .headerSticky {
@@ -247,6 +246,10 @@ a.active {
 }
 
 @media (max-width: 860px) {
+  .header {
+    height: auto;
+  }
+
   /* Nav */
   nav ul {
     display: flex;
