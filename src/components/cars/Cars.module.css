@@ -30,18 +30,34 @@
 }
 
 .carsContainer {
-  overflow: auto;
   padding: 100px 64px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .carsBoxes {
-  display: flex;
-  /* display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, 30%); */
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 114px;
+
+  padding: 50px 120px 50px 30px;
+
+  overflow-x: auto;
+}
+
+/* width */
+.carsBoxes::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.carsBoxes::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.carsBoxes::-webkit-scrollbar-thumb {
+  background: #741906;
 }
 
 .pagination {
@@ -102,6 +118,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .carsContainer {
+    padding: 100px 36px;
+  }
+
   .carsSection h2 {
     font-size: 42px;
   }

@@ -11,7 +11,6 @@ const Testimonials = () => {
 
   // const pagiTest = (index) => {
   //   setCount(index);
-  //   console.log("Index", index);
   // };
 
   useEffect(() => {
