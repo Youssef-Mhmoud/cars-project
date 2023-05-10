@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./AboutSection.module.css";
+import MinifyImgs from "../MinifyImgs";
 
 const AboutSection = () => {
   return (
@@ -27,28 +28,8 @@ const AboutSection = () => {
         </p>
       </div>
       <div className={classes.imgCar}>
-        <picture>
-          <source
-            srcSet={require("../../assets/pngegg-1.webp")}
-            type="image/webp"
-          />
-          <source
-            srcSet={require("../../assets/pngegg-1.png")}
-            type="image/png"
-          />
-          <img src={require("../../assets/pngegg-1.png")} alt="img" />
-        </picture>
-        <picture>
-          <source
-            srcSet={require("../../assets/pngegg-2.webp")}
-            type="image/webp"
-          />
-          <source
-            srcSet={require("../../assets/pngegg-2.png")}
-            type="image/png"
-          />
-          <img src={require("../../assets/pngegg-2.png")} alt="img" />
-        </picture>
+        <MinifyImgs pathImg={"pngegg-1"} />
+        <MinifyImgs pathImg={"pngegg-2"} />
       </div>
     </section>
   );

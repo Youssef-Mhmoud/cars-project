@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const TestimonialsSection = () => {
-  const [testiData, setTestiData] = useState(data.testimonials);
+  const [testiData, setTestiData] = useState([]);
   const [count, setCount] = useState(0);
 
-  // const pagiTest = (index) => {
-  //   setCount(index);
-  // };
+  useEffect(() => {
+    setTestiData(data.testimonials);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
