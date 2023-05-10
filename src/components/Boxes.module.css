@@ -12,6 +12,16 @@
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .box svg {
+    font-size: 40px;
+  }
+
+  .box h3 {
+    margin: 24px 0 -5px;
+  }
+}
+
 @media (max-width: 500px) {
   .box svg {
     font-size: 32px;

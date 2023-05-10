@@ -27,8 +27,28 @@ const About = () => {
         </p>
       </div>
       <div className={classes.imgCar}>
-        <img src={require("../../assets/pngegg-1.png")} alt="car" />
-        <img src={require("../../assets/pngegg-2.png")} alt="" />
+        <picture>
+          <source
+            srcSet={require("../../assets/pngegg-1.webp")}
+            type="image/webp"
+          />
+          <source
+            srcSet={require("../../assets/pngegg-1.png")}
+            type="image/png"
+          />
+          <img src={require("../../assets/pngegg-1.png")} alt="img" />
+        </picture>
+        <picture>
+          <source
+            srcSet={require("../../assets/pngegg-2.webp")}
+            type="image/webp"
+          />
+          <source
+            srcSet={require("../../assets/pngegg-2.png")}
+            type="image/png"
+          />
+          <img src={require("../../assets/pngegg-2.png")} alt="img" />
+        </picture>
       </div>
     </section>
   );

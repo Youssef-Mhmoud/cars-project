@@ -3,11 +3,13 @@
   background-size: cover;
   background-color: #dfdfdf;
   background-position: center center;
-  height: 80vh;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .servicesSection .container {
-  padding: 100px 64px;
+  padding: 0 64px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -48,11 +50,13 @@
 
   margin-top: 100px;
 }
+
 /* Responsive */
+
 @media (max-width: 768px) {
-  .servicesSection {
+  /* .servicesSection {
     height: 100vh;
-  }
+  } */
 
   .servicesSection h2 {
     font-size: 42px;
@@ -64,13 +68,15 @@
 
   .boxes {
     grid-template-columns: repeat(2, 1fr);
+    gap: 5px 32px;
+    margin-top: 80px;
   }
 }
 
-@media (max-width: 668px) {
-  .servicesSection {
-    height: 125vh;
-  }
+@media (max-width: 690px) {
+  /* .servicesSection {
+    height: 105vh;
+  } */
 
   .boxes {
     grid-template-columns: repeat(1, 1fr);
@@ -84,5 +90,11 @@
 
   .servicesSection .container {
     padding: 80px 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .servicesSection {
+    height: 150vh;
   }
 }

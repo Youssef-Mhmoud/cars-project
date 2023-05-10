@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Models.module.css";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Models = () => {
   return (
@@ -10,6 +10,11 @@ const Models = () => {
         className={classes.imgHidden}
         alt=""
       />
+      {/* <picture>
+                        <source srcSet={item.optImg} type="image/webp" />
+                        <source srcSet={item.img} type="image/png" />
+                        <img src={item.img} alt="img" className="img1" />
+                      </picture> */}
       <img src={require("../../assets/cars-model/Car-2.png")} alt="" />
       <img
         src={require("../../assets/cars-model/Car-3.png")}
@@ -26,7 +31,10 @@ const Models = () => {
         <div>
           <h3>Tesla Model 3</h3>
           <p>Disruptive, avant-garde, futuristic, innovative.</p>
-          <Link smooth to="/#contact-us">
+          <Link
+            to="/contact-us"
+            onClick={() => window.location.replace("#contact-us")}
+          >
             Contact
           </Link>
         </div>

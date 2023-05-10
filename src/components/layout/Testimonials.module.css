@@ -158,6 +158,10 @@
   .cardTesti {
     width: 80%;
   }
+
+  .paginationTesti {
+    bottom: 4%;
+  }
 }
 
 @media (max-width: 760px) {

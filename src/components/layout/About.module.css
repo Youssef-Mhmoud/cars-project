@@ -39,14 +39,14 @@
   position: relative;
 }
 
-.imgCar img:last-child {
+.imgCar picture:last-child img {
   width: 380px;
 }
 
-.imgCar img:first-child {
+.imgCar picture:first-child img {
   position: absolute;
-  top: 60%;
-  left: 70%;
+  top: 55%;
+  left: 60%;
   transform: translate(-50%, -50%);
 
   width: 100%;
@@ -68,7 +68,7 @@
     font-size: 72px;
   }
 
-  .imgCar img:last-child {
+  .imgCar picture:last-child img {
     width: 320px;
   }
 }
@@ -78,7 +78,7 @@
     font-size: 68px;
   }
 
-  .imgCar img:last-child {
+  .imgCar picture:last-child img {
     width: 300px;
   }
 }

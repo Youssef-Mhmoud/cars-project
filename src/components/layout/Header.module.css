@@ -1,15 +1,18 @@
 .header {
-  background-image: url("../../assets/Background.png");
+  background-image: url("../../assets/Background.webp");
+  background-color: #12273d;
   background-size: cover;
   background-position: center center;
 
   position: relative;
+  /* padding-top: 100px; */
+  padding-bottom: 100px;
 
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .headerSticky {
-  padding: 86px 0 0;
+  padding: 86px 0;
 }
 
 nav {
@@ -316,6 +319,10 @@ a.active {
 }
 
 @media (max-width: 768px) {
+  .header .nav {
+    padding: 12px 32px;
+  }
+
   .innerHeroInfo {
     width: 100%;
     margin-top: 200px;
@@ -323,6 +330,12 @@ a.active {
 
   .innerHeroInfo a {
     margin: 42px auto;
+  }
+
+  .header .heroInfo {
+    padding: 0 32px;
+
+    text-align: center;
   }
 
   .heroInfo h1 {

@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const { setCartActive, carList } = useContext(CartContext);
@@ -26,74 +26,79 @@ const Header = () => {
     setCartActive((prevActive) => !prevActive);
   };
 
+  const reachSectionHandler = (hashSection) => {
+    window.location.replace(`#${hashSection}`);
+  };
+
   return (
     <header
       className={`${classes.header} ${sticky ? classes.headerSticky : ""}`}
     >
       <nav className={sticky ? classes.sticky : ""} ref={navRef}>
         <div className={classes.nav}>
-          <HashLink smooth to="#">
+          <NavLink to="" onClick={() => reachSectionHandler("")}>
             <div className={classes.logo}>
               <span>Your</span>
               <span>Car</span>
             </div>
-          </HashLink>
+          </NavLink>
           <div className={classes.navCartFlex}>
             <ul className={showMenu ? classes.showMenu : ""}>
               <li>
-                <NavHashLink
-                  to="#"
-                  smooth
-                  className={() =>
-                    window.location.hash === "" ? classes.active : ""
-                  }
+                <NavLink
+                  to=""
+                  onClick={() => {
+                    reachSectionHandler("");
+                  }}
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  end
                 >
                   Home
-                </NavHashLink>
+                </NavLink>
               </li>
               <li>
-                <NavHashLink
-                  smooth
-                  className={() =>
-                    window.location.hash === "#about" ? classes.active : ""
-                  }
-                  to="/#about"
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  onClick={() => {
+                    reachSectionHandler("about");
+                  }}
                 >
                   About
-                </NavHashLink>
+                </NavLink>
               </li>
               <li>
-                <NavHashLink
-                  to="/#services"
-                  smooth
-                  className={() =>
-                    window.location.hash === "#services" ? classes.active : ""
-                  }
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  onClick={() => {
+                    reachSectionHandler("services");
+                  }}
                 >
                   Services
-                </NavHashLink>
+                </NavLink>
               </li>
               <li>
-                <NavHashLink
-                  to="/#cars"
-                  smooth
-                  className={() =>
-                    window.location.hash === "#cars" ? classes.active : ""
-                  }
+                <NavLink
+                  to="/cars"
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  onClick={() => {
+                    reachSectionHandler("cars");
+                  }}
                 >
                   Cars
-                </NavHashLink>
+                </NavLink>
               </li>
               <li>
-                <NavHashLink
-                  smooth
-                  className={() =>
-                    window.location.hash === "#contact-us" ? classes.active : ""
-                  }
-                  to="/#contact-us"
+                <NavLink
+                  to="/contact-us"
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  onClick={() => {
+                    reachSectionHandler("contact-us");
+                  }}
                 >
                   Contact us
-                </NavHashLink>
+                </NavLink>
               </li>
             </ul>
             <div className={classes.cartItem}>
@@ -131,7 +136,7 @@ const Header = () => {
             We offer a wide range of cars that cater to your needs and budget.
             Visit us today and drive away with your dream car!
           </p>
-          <HashLink smooth to="/#cars">
+          <NavLink to="/cars" onClick={() => reachSectionHandler("cars")}>
             <span>Discover</span>
             <span>
               <svg
@@ -151,7 +156,7 @@ const Header = () => {
                 />
               </svg>
             </span>
-          </HashLink>
+          </NavLink>
         </div>
       </div>
     </header>

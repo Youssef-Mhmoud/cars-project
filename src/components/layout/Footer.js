@@ -11,14 +11,18 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer id="contact-us">
       <div className={classes.contFooter}>
         <div className={classes.contLogo}>
-          <Link smooth to="#" className={classes.logo}>
+          <Link
+            to=""
+            className={classes.logo}
+            onClick={() => window.location.replace("#")}
+          >
             <span>Your</span>
             Car
           </Link>
