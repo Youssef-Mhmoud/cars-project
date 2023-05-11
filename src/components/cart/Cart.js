@@ -24,7 +24,11 @@ const Cart = () => {
   };
 
   return (
-    <div className={cartActive ? classes.active : classes.cart}>
+    <div
+      className={
+        cartActive ? `${classes.cart} ${classes.active}` : classes.cart
+      }
+    >
       <div className={classes.closeCart} onClick={closeCart}>
         <FontAwesomeIcon icon={faClose} />
       </div>

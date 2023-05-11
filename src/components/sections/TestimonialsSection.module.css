@@ -1,6 +1,6 @@
 .testiSection {
   background-color: #12273d;
-  height: 100vh;
+  height: 80vh;
   padding-bottom: 100px;
   position: relative;
 
@@ -166,9 +166,9 @@
 }
 
 @media (max-width: 760px) {
-  /* .testiSection {
-    height: 80vh;
-  } */
+  .testiSection {
+    height: 70vh;
+  }
 
   .containerTesti {
     padding: 96px 20px;
@@ -207,7 +207,7 @@
 
 @media (max-width: 600px) {
   .testiSection {
-    height: 100vh;
+    height: 65vh;
   }
 
   .cardTesti p {
@@ -220,5 +220,25 @@
 
   .testiSection h2::after {
     font-size: 48px;
+  }
+}
+
+@media (max-width: 430px) {
+  .testiSection {
+    height: 80vh;
+  }
+
+  .paginationTesti {
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 380px) {
+  .testiSection {
+    height: 100vh;
+  }
+
+  .paginationTesti {
+    bottom: 5%;
   }
 }

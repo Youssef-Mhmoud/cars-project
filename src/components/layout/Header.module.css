@@ -264,7 +264,6 @@ a.active {
 
 @media (max-width: 800px) {
   /* Nav */
-
   nav ul {
     position: fixed;
     top: 75.5px;
@@ -286,6 +285,8 @@ a.active {
 
   nav .showMenu {
     right: 0;
+    background-color: #12273def;
+    backdrop-filter: blur(25px);
   }
 
   nav ul li {
