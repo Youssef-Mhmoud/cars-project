@@ -1,6 +1,6 @@
 .testiSection {
   background-color: #12273d;
-  height: 80vh;
+  height: 100vh;
   padding-bottom: 100px;
   position: relative;
 
@@ -167,7 +167,7 @@
 
 @media (max-width: 760px) {
   .testiSection {
-    height: 70vh;
+    height: 100vh;
   }
 
   .containerTesti {
@@ -207,7 +207,7 @@
 
 @media (max-width: 600px) {
   .testiSection {
-    height: 65vh;
+    height: 100vh;
   }
 
   .cardTesti p {
@@ -225,7 +225,7 @@
 
 @media (max-width: 430px) {
   .testiSection {
-    height: 80vh;
+    height: 90vh;
   }
 
   .paginationTesti {
