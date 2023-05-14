@@ -12,7 +12,7 @@ import { CartContext } from "../../../context/CartContext";
 const Cars = () => {
   const { carList } = useContext(CartContext);
 
-  const [data, setData] = useState(dataCars.cars);
+  const [data] = useState(dataCars.cars);
   const [page, setPage] = useState(dataCars.cars);
   const [count, setCount] = useState(0);
   const [start, setStart] = useState(0);

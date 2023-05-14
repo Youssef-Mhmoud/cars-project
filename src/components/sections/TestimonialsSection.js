@@ -9,16 +9,24 @@ const TestimonialsSection = () => {
   const [testiData, setTestiData] = useState([]);
   const [count, setCount] = useState(0);
 
+  const pagiTest = (index) => {
+    setCount(index);
+  };
+
   useEffect(() => {
     setTestiData(data.testimonials);
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
+    if (count === 4) return setCount(0);
+
+    const slider = setTimeout(() => {
       setCount(count + 1);
     }, 5000);
 
-    if (count === 4) return setCount(0);
+    return () => {
+      clearInterval(slider);
+    };
   }, [count]);
 
   return (
@@ -54,7 +62,7 @@ const TestimonialsSection = () => {
           {testiData.map((testiLength, i) => (
             <span
               key={i}
-              // onClick={() => pagiTest(i)}
+              onClick={() => pagiTest(i)}
               className={count === i ? classes.active : ""}
             ></span>
           ))}
